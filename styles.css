@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #454545;
+    overflow-y: hidden;
+  }
+
+  .editor-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+  
+  }
+
+  .editor-container .editor {
+    height: 90%;
+    border: none;
+    resize: none;
+    padding: 10px;
+    overflow-y: auto;
+    
+  }
+
+  #html-input {
+    width: 50%;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 15px 0px 15px 15px;
+  }
+
+  #css-input,
+  #js-input {
+    display: none;
+    width: 50%;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 15px 0px 15px 15px;
+  }
+
+  #preview {
+    width: 50%;
+    height: 90%;
+    
+    background-color: rgb(239, 235, 235);
+    margin-left: 20px;
+    border-radius: 0px 15px 15px 15px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ 
+label {
+  position: relative;
+  left: 25px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  width: 46.5%;
+  align-items: center;
+  gap: 10PX;
+  border-radius: 5px 5px 0px 5px;
+}
+.label {
+  display: flex;
+  gap: 20px;
+}
+
+
+  /* CSS for CodeMirror responsiveness */
+@media screen and (max-width: 768px) {
+  .CodeMirror {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    height: 30vh !important; /* Set height to 30% of viewport height */
+    width: 100% !important; /* Set width to 100% of its container */
+  }
+  .editor-container  {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#html-input,#css-input,
+#js-input,#preview{
+  height: 30vh;
+  width: 100%;
+  margin: 0;
+}
+#out {
+  display: none;
+}
+}
+
